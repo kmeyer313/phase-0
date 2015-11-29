@@ -1,3 +1,111 @@
 html {
-  background: red;
+  color: #000080;
+  background-color: #ffffff;
 }
+
+a:link {
+  color: #800080;
+}
+
+a:visited {
+  color: #ff0000;
+}
+
+aside {
+  text-align: center;
+}
+
+header {
+  text-align: center;
+  font-weight: bold;
+  white-space: pre-line;
+  font-size: 100%;
+  margin-bottom: 10px;
+}
+
+.larger-letter {
+  font-size: 175%
+}
+
+.smaller-letter {
+  font-size: 75%;
+}
+
+.larger-title {
+  font-size: 120%;
+}
+
+.horizontal-line {
+  width 98%;
+  height: 1px;
+  background-color: black;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+#left {
+  width: 45%;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  left: 30px;
+  right: 30px;
+}
+
+#right {
+  width: 45%;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  left: 30px;
+  right: 30px;
+}
+
+li {
+  margin-bottom: 30px;
+}
+
+section {
+  text-align: center;
+  font-size: 12px;
+}
+
+footer {
+  font-size: 12px;
+}
+
+/*
+Reflection for 3.3 Pair Challenge
+1) What is important to know when linking an external file (like a stylesheet) to an HTML file?
+- The link needs to be included inside the <head> element and use the href, type, and rel attributes. The code follows this format: <link href="file-name.css" type="text/css" rel="stylesheet"/>. The href is the path of where the css file is located. Type tells us the type of document that it is being linked to. Rel specifies the relationship between the file that is being linked and the HTML page. It is important to have a separate stylesheet rather than embedding it all in the HTML file so that you can use the stylesheet for multiple HTML pages.
+
+2) What tricks did you use to help you with positioning? How hard was it to get the site as you wanted it?
+- This was tricky! The harderst section to position was the middle. We created two separate lists that would be able to sit "inline" next to each other. However, when I reduce the size of the browser window, the second list bumps from the right to underneath the first list rather than collapsing within itself. We used this code for the left and right lists:
+    #left {
+      width: 45%;
+      display: inline-block;
+      vertical-align: top;
+      position: relative;
+      left: 30px;
+      right: 30px;
+    }
+It was hard to create the spacing between the links, but we used this to help create the space:
+    li {
+      margin-bottom: 30px;
+    }
+
+3) What CSS did you use to modify the element style (like size, color, etc.)?
+- We used font-size and I decided to try to using a mix of px and % to resize the text to look like the original site. Setting the color was pretty easy as the whole page was #000080, the links were #800080, and the visited links were #ff0000. It started to get tricky with the variation in font sizes in the heading and in the body. I avoided using <h1> tags since that isn't really meant for styling purposes. It was hard specifying which letters and lines were which size and I ended up using a lot of <span> tags and classes. I don't feel confident that this is the best way to do it, but I couln't figure out how to use :first-letter or the :nth-child(#) rules.
+
+4) Did you modify the HTML to include classes or ids? If so, which did you choose and why? If you didn't, how would you know which one to add to your HTML?
+- We chose to classes for font sizes as there were multiple places where I wanted increase or decrease the size. We chose IDs for each separate list for the bulletpoints in the middle section since each was for a one time use.
+
+5) When you compared your site to the actual code base, which do you think had cleaner code that followed best practices and why?
+- Well... I am timid to say this, but I think my site followed better practice because it looks like the original included a lot of the styling in the html code rather than using a separate styling sheet. For example, in the top where the address information is they split apart the B and H from the rest of the words and specified the font size right in line. They also used <br> to create breaks for each line of the address.
+
+I see that they used a table for the mid section of the links and that seems like a better approach than the lists I was using as I couldn't get them to stay next to each other when I reduced the browser window. Still, there is a lot of styling in the HTML code.
+
+It isn't a great idea to style within the HTML because it is more complicated to change and wouldn't be able to be applied across other pages.
+
+*/
