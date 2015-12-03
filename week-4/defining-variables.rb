@@ -1,6 +1,6 @@
 #Solution Below
-first_name=katie
-last_name=meyer
+first_name='Katie'
+last_name='Meyer'
 age=28
 # RSpec Tests. They are included in this file because the local variables you are creating are not accessible across files. If we try to run these files as a separate file per normal operation, the local variable checks will return nil.
 describe 'first_name' do
