@@ -1,3 +1,53 @@
-html {
-  background-color: red
+body {
+  font-family: Futura;
+  background-color: gray;
+}
+
+a:link {
+  color: gray;
+  text-decoration: none;
+}
+
+a:hover {
+  font-size: 115%;
+}
+
+
+header{
+  background-color: whitesmoke;
+  border: 5px solid black;
+  padding: 10px;
+  margin: 10px;
+}
+
+
+.column-1{
+  background-color: whitesmoke;
+  width: 45%;
+  margin: 10px;
+  padding: 10px;
+  display: inline-block;
+  vertical-align: top;
+  border: 5px solid black;
+}
+
+
+
+.column-2{
+  background-color: whitesmoke;
+  width: 45%;
+  margin: 10px;
+  padding: 10px;
+  display: inline-block;
+  vertical-align: top;
+  border: 5px solid black;
+}
+
+
+
+footer{
+  background-color: whitesmoke;
+  margin: 10px;
+  border: 5px solid black;
+  padding: 10px;
 }
