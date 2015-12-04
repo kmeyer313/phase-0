@@ -1,8 +1,11 @@
 # Define an Empty Method
-def do_something( , , )
+def do_something(first_name, middle_name, last_name)
+  puts first_name
+  puts middle_name
+  puts last_name
 end
 
-puts do_something( , , )
+do_something("Kathleen", "Alaina", "Meyer")
 # I worked on this challenge [by myself, with: ].
 
 
