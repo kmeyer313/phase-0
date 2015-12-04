@@ -2,7 +2,6 @@
 
 # I worked on this challenge by myself.
 
-
 # Your Solution Below
 
 def add(num_1, num_2)
