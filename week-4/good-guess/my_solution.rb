@@ -1,6 +1,6 @@
 # Good Guess
 
-# I worked on this challenge [by myself, with: ].
+# I worked on this challenge with Marshall.
 
 
 # Your Solution Below
@@ -10,4 +10,6 @@ def good_guess?(num)
   else
     return false
   end
-en
+end
+
+puts good_guess?(36)
