@@ -1,6 +1,6 @@
 # Simple Substrings
 
-# I worked on this challenge [by myself, with: ].
+# I worked on this challenge with Marshall.
 
 
 # Your Solution Below
@@ -12,6 +12,7 @@ def welcome(address)
     return "You should move to California"
   end
 end
+
 
 
 
