@@ -4,7 +4,7 @@
 # include it in this file. Also make sure everything that isn't code
 # is commented in the file.
 
-# I worked on this challenge [by myself, with: ].
+# I worked on this challenge with: Timur.
 
 # 0. total Pseudocode
 # make sure all pseudocode is commented out!
@@ -50,9 +50,9 @@ def sentence_maker(array_of_strings)
   st_sentence = ""
   array_of_strings.each do |x|
     if array_of_strings[0] == x
-      st_sentence = x.upcase
+      st_sentence = x.capitalize!
     else
-      st_sentence = st_sentence + " " + x
+      st_sentence = st_sentence + " " + x.to_s
     end
   end
   return st_sentence + "."
