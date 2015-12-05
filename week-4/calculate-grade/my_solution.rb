@@ -1,6 +1,6 @@
 # Calculate a Grade
 
-# I worked on this challenge [by myself, with: ].
+# I worked on this challenge with Marshall.
 
 
 # Your Solution Below
@@ -17,3 +17,5 @@ def get_grade(num)
     return "F"
   end
 end
+
+puts get_grade(24)
