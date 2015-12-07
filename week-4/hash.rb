@@ -12,7 +12,7 @@ my_info = {
   :hometown => "North Riverside",
   :age => 28
 }
-
+# I also tried my_info.keys but I got an error message similar to the one I referred to on line 20.
 my_info.each do |key|
   puts "#{key}"
 end
