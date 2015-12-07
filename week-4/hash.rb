@@ -12,11 +12,12 @@ my_info = {
   :hometown => "North Riverside",
   :age => 28
 }
+# I also tried my_info.keys but I got an error message similar to the one I referred to on line 20.
+my_info.each do |key|
+  puts "#{key}"
+end
 
-puts my_info
-
-
-
+# I'm not sure what to do from here, I keep getting this error message: "hash.rb:25:in `<main>': undefined method `describe' for main:Object (NoMethodError)""
 
 # RSpec Tests. They are included in this file because the local variables you are creating are not accessible across files. If we try to run these files as a separate file per normal operation, the local variable checks will return nil.
 
