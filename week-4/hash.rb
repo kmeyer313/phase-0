@@ -13,10 +13,11 @@ my_info = {
   :age => 28
 }
 
-puts my_info
+my_info.each do |key|
+  puts "#{key}"
+end
 
-
-
+# I'm not sure what to do from here, I keep getting this error message: "hash.rb:25:in `<main>': undefined method `describe' for main:Object (NoMethodError)""
 
 # RSpec Tests. They are included in this file because the local variables you are creating are not accessible across files. If we try to run these files as a separate file per normal operation, the local variable checks will return nil.
 
