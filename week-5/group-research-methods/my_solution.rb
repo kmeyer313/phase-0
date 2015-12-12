@@ -65,16 +65,13 @@ end
 # #to_a is needed in the hash solution to transfer the hashes into arrays within the array. Again, #map and reassigning the variable were not needed for it to be non-destructive.
 
 # #sort_by is what I spent most of my time trying to understand. #sort does not work, but #sort_by does. Why? Long story short - The method blocks above take one parameter, not two.
-
-# Above I used { |x| x.to_s } where x.to_s is the only parameter and in { |x, y| y }, y is the only parameter. The method will iterate through all the items, sorting them based on the value of x.
-
+# Above I used { |x| x.to_s } where x.to_s is the only parameter and in { |x, y| y }, y is the only parameter. The method will iterate through all the items, sorting them based on the value of x for the array method and y for the hash method.
 # An example of #sort taking two parameters would be { |x, y| x > y} --> x and y are the parameters being compared. The method would iterate through this comparing process for each of the items and they would be sorted.
-
 # I found conflicting opinions for which is better to use in certain situations, some say that #sort is more efficient while others find #sort_by to be more efficient. I suppose it depends on the context of the problem.
 
-# To grasp this, I read the Rubyist 10.8, looked on the Ruby Docs for Enumerables (didn't find the explanations very helpful), two other blogs (the top two when Googling "ruby sort vs sort_by"), and through StackOverflow questions to try to understand the difference between them.
+# To grasp this, I read the Rubyist 10.8, looked on the Ruby Docs for Enumerables (didn't find the explanations very helpful), two other blogs (the top two when Googling "ruby sort vs sort_by"), and through StackOverflow questions to try to understand the difference between them. It was only after looking through all of that when it started to click.
 
-# I learned some interesting things about the Comparable module in the Rubyist 7.6 that helped me grasp the significance of the built-in comparator method (<=>). Worth diving into when we start creating new classes.
+# I learned some interesting things about the Comparable module in the Rubyist 7.6 that helped me grasp the significance of the built-in comparator method (<=>). Worth diving into when creating new classes.
 
 
 # # Person 4
