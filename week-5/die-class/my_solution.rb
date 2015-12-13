@@ -7,9 +7,13 @@
 # 0. Pseudocode
 
 # Input:
-# Output:
+# Output: random number
 # Steps:
-
+Create a new class
+initialize for number of sides
+Define method for sides? or if not if initialized?
+Define method for roll (to be a random number)
+Raise an error if < 1
 
 # 1. Initial Solution
 
