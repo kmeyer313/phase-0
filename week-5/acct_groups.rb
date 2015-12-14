@@ -2,7 +2,7 @@
 # Input: list of students (first and last name are one element combined)
 # Output: arrays with 3-5 students in each
 # Steps:
-  # - DETERMINE how many names in the list (#count)
+  # - DETERMINE how many names in the list (count, size?, length?)
   # - CALCULATE quotient of names on list and size of group possibilities (3, 4, 5)
   #   - FOR each group size possibility
   #     - IF remainder is 3 or greater, split into groups of that size
@@ -40,3 +40,9 @@ What did you learn in the process of refactoring your initial solution? Did you 
 - I didn't refactor because I don't think the initial solution is going to work. I think the #each_slice method could work as a refactored solution and that I should have done something with more steps for the initial solution. If I have time, I need to come back to this challenge with new eyes and see if I can figure out where I am going wrong.
 
 =end
+
+# if list_of_names_array.size > 0
+#     list_of_names_array.each do |name|
+#       big_array[0] <<
+#       big_array[1] <<
+#       big_array[2] <<
