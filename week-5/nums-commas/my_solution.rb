@@ -1,4 +1,7 @@
 # Numbers to Commas Solo Challenge
+# UPDATE - I met with Emmanuel on Monday afternoon after everything was turned in and he helped me work through what was wrong with Attempt #3. I added the working solution in the file my_solution_solved.rb for my own sake. :) You don't have to wrap your mind around where I went wrong if you want to help! I get it now! If you want to take a shot at refactoring what I have, head over to my_solution_solved.rb. I changed one thing but don't know if there is anything else I can do.
+
+# ------ Original Submission Begins Here ------
 
 # I spent 7 hours on this challenge. There are multiple attempts here, none were successful. Attempt 3 was the closest. I sectioned the attempts with ----- lines. Hope you don't get lost!
 
