@@ -1,5 +1,5 @@
 # Your Names
-# 1)
+# 1) Katie Meyer
 # 2)
 
 # We spent [#] hours on this challenge.
