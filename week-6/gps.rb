@@ -2,7 +2,7 @@
 # 1) Katie Meyer
 # 2) nil
 
-# We spent 1.5 hours on this challenge.
+# I spent 1.5 hours on this challenge.
 
 # Bakery Serving Size portion calculator.
 
