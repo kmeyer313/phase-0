@@ -94,6 +94,6 @@ p number.check_card
 
 =begin
 What was the most difficult part of this challenge for you and your pair? ## Figuring out how to double the values at the even indices.
-What new methods did you find to help you when you refactored? Lines 48-50 was definitely a new way of using .each_index. I also have not used .each_char on a string yet as we did in line 55.
-What concepts or learnings were you able to solidify in this challenge? I am feeling much more comfortable with writing methods, using counters, using the modulus, and switching between strings, integers, and arrays. There were a lot of pieces in the challenge that were coming together for me. I drove the whole time, which was good for me because I have not felt confident driving before, so my pair let me drive the whole time to help me build my confidence.
+What new methods did you find to help you when you refactored? ## Lines 48-50 was definitely a new way of using .each_index. I also have not used .each_char on a string yet as we did in line 55.
+What concepts or learnings were you able to solidify in this challenge? ## I am feeling much more comfortable with writing methods, using counters, using the modulus, and switching between strings, integers, and arrays. There were a lot of pieces in the challenge that were coming together for me. I drove the whole time, which was good for me because I have not felt confident driving before, so my pair let me drive the whole time to help me build my confidence.
 =end
