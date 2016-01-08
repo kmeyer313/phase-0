@@ -57,8 +57,11 @@ function average(arrayIntegers){
 
 // __________________________________________
 // Refactored Solution
+// I used the object constructor notation rather than the literal notation.
+// Tried to find an average method in Math but there was nothing. Found array method .reduce instead.
 
 var gradebook = {};
+// Learned this from another peer and I like its efficiency!
 for (var student in students) {
   gradebook[students[student]] = {
     testScores: scores[student]
@@ -74,32 +77,37 @@ gradebook.getAverage = function(name) {
 }
 
 function average(arrayIntegers) {
-  var total = 0;
-  for(var i = 0; i < arrayIntegers.length; i++) {total += arrayIntegers[i];}
+  var total = arrayIntegers.reduce(function(a, b) {return a + b});
   return total / arrayIntegers.length;
 };
-
-// Tried to find an average method in Math but there was nothing.
-// We used the object constructor notation rather than the literal notation.
-// We also took out the avg variable in the average function, reducing the code to one line that returns the value of dividing the total by the arrayIntegers length.
-
 
 // __________________________________________
 // Reflect
 
 // What did you learn about adding functions to objects?
-// Some need another function constructed outside of the object, as we did for average here.
-// We were hung up on getAverage function for awhile, we couldn't make it work until we realized we needed to use return to return the value.
-// In the addScore function, we didn't need to return anything because it just updated the gradebook object.
+  // Some need another function constructed outside of the object, as we did for average here.
+  // We were hung up on getAverage function for awhile, we couldn't make it work until we realized we needed to use return to return the value.
+  // In the addScore function, we didn't need to return anything because it just updated the gradebook object.
 
 // How did you iterate over nested arrays in JavaScript?
-// The iteration expression remained the same, the trick was locating the pieces to iterate over. Working backwards,
-// for the getAverage function, we called the indexOf function on the student array for the name that is passed through the function.
-// This index number was then passed through the average function as the indexed value we want to access in the scores nested array.
+  // The iteration expression remained the same, the trick was locating the pieces to iterate over. Working backwards,
+  // for the getAverage function, we called the indexOf function on the student array for the name that is passed through the function.
+  // This index number was then passed through the average function as the indexed value we want to access in the scores nested array.
+  // In refactoring, I thought there had to be a way to iterate through the gradebook object and
+  //    access the elements there, differently than we had done in the initial solution. I used
+  //    brackets for each key as so: gradebook[name]["testScores"]. I thought you could use dot
+  //    notation or brackets, but dot notation does not work. I need to look into why.
 
 // Were there any new methods you were able to incorporate? If so, what were they and how did they work?
-// Unfortunately, no.
-
+  // reduce was used to sum the elements in the array using the syntax:
+  // array.reduce(function(previousValue, currentValue, currentIndex, array) { return previousValue + currentValue;});
+  // Here I used it as so arrayIntegers.reduce(function(a, b) {return a + b}); where 'a' refers
+  //    to the previousValue and 'b' refers to the currentValue. The callback function is invoked
+  //    for each element in the array, excluding holes.
+  // initialValue does not always need to be provided, but if it is, you can add it as 10 is in this example:
+  //    [0, 1, 2, 3, 4].reduce(function(previousValue, currentValue, currentIndex, array) {
+  //    return previousValue + currentValue;}, 10);
+  // It doesn't seem that the array argument is necessary when listing the parameter where I used it above.
 
 // __________________________________________
 // Test Code:  Do not alter code below this line.
