@@ -7,7 +7,7 @@ This is a one-to-one relationship because there cannot be duplicates of social s
 
 **One-to-Many**
 
-![one_to_many](ims/one_to_many.png "one_to_many")
+![one_to_many](imgs/one_to_many.png "one_to_many")
 
 This is a one-to-many relationship because people can only have one birth mother, but birth mothers can have more than one child.
 
