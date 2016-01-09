@@ -1,4 +1,4 @@
-# Release 5: SELECTing data from a database
+**Release 5: SELECTing data from a database**
 
 1. Select all data for all states.
 `SELECT * FROM states;`
@@ -30,17 +30,26 @@
 10. Select the region_name and the state_name for all states and regions in ascending order by region_id. Refer to the region by name. (This will involve joining the tables).
 `SELECT regions.region_name, states.state_name FROM regions JOIN states ON regions.id = states.region_id ORDER BY states.region_id ASC;`
 
+
 **My Schema**
+
 ![outfit_schema](outfit_schema.png "Outfit Schema")
 
+
 **Reflection**
+
 *What are databases for?*
+
 Databases are collections of organized data that can be manipulated (create, add, edit, delete data), queried (retrieve information), aggregated (where calculations can be performed), and relate/connect data across multiple tables.
 
+
 *What is a one-to-many relationship?*
+
 Where one value from a table is related to many values of another table. They are linked with primary and foreign keys.
 
+
 *What is a primary key? What is a foreign key? How can you determine which is which?*
+
 A primary key is a unique identifier for each row or record in a given table. In this column, none of the values are NULL and each value is unique. A foreign key is a column that contains the primary key of another table in the database. It holds the value of the other (related) table's primary key. It does not need to be unique and it can have a value of NULL. The primary key and the foreign key are used to connect rows in different tables.
 
 *How can you select information out of a SQL database? What are some general guidelines for that?*
