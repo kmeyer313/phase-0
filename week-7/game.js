@@ -360,3 +360,132 @@ function gameOver() {
 // first because I had parentheses around all the values in the brackets in the code block. Then I removed them all, and it still
 // wasn't working, I couldn't access the "points" property. Then I put quotes just around "points" and the function worked! So,
 // for a variable name in a loop, no quotation marks, but for the actual property name, use quotes to access it.
+
+
+var deck = ["flounder", "flounder", "flounder", "flounder", "catfish", "catfish", "catfish", "catfish", "sunfish", "sunfish", "sunfish", "sunfish", "angelfish", "angelfish", "angelfish", "angelfish", "flying_fish", "flying_fish", "flying_fish", "flying_fish", "whale", "whale", "whale", "whale", "dolphin", "dolphin", "dolphin", "dolphin", "goldfish", "goldfish", "goldfish", "goldfish", "shark", "shark", "shark", "shark", "sailfish", "sailfish", "sailfish", "sailfish"];
+
+
+
+function Player(){
+  this.flounder = 0;
+  this.catfish = 0;
+  this.sunfish = 0;
+  this.angelfish = 0;
+  this.flying_fish = 0;
+  this.whale = 0;
+  this.dolphin = 0;
+  this.goldfish = 0;
+  this.shark = 0;
+  this.sailfish = 0;
+  this.points = 0;
+};
+
+var player1 = new Player();
+var player2 = new Player();
+
+
+ function shuffle(array) {
+  var m = array.length, t, i;
+  // While there remain elements to shuffle...
+  while (m) {
+    // Pick a remaining element...
+    i = Math.floor(Math.random() * m--);
+    // And swap it with the current element.
+    t = array[m];
+    array[m] = array[i];
+    array[i] = t;
+  }
+  return array;
+}
+shuffle(deck);
+console.log(deck);
+
+
+var player1arr = []; // Are these necessary to be accessed outside of deal function?
+var player2arr = [];
+var playerArr = [player1, player2]
+
+function deal(deck, playerArr) {
+  // shuffle()
+  player1arr = deck.splice(0,5);
+  player2arr = deck.splice(0,5);
+}
+
+deal(deck);
+console.log(player1arr);
+console.log(player2arr);
+console.log(deck);
+
+for (var i = 0; i < player1arr.length; i++) {
+  player1[player1arr[i]] += 1;
+}
+// var player1 = {
+//   flounder: 0,
+//   catfish: 2,
+//   sunfish: 0,
+//   angelfish: 0,
+//   flying_fish: 1,
+//   whale: 0,
+//   dolphin: 1,
+//   goldfish: 0,
+//   shark: 1,
+//   sailfish: 4,
+//   points: 0,
+// }
+
+// var player2 = {
+//   flounder: 1,
+//   catfish: 0,
+//   sunfish: 2,
+//   angelfish: 2,
+//   flying_fish: 0,
+//   whale: 0,
+//   dolphin: 0,
+//   goldfish: 0,
+//   shark: 0,
+//   sailfish: 0,
+//   points: 0,
+// }
+
+
+function checkMatch(playerObject) {
+  for (var property in playerObject) {
+    if (playerObject[property] == 4) {
+      console.log("Match!");
+      playerObject[property] = 0;
+      playerObject.points += 1;
+    }
+  };
+  console.log(playerObject);
+};
+
+checkMatch(player1);
+
+function display(playerObject) {
+  console.log(playerObject);
+}
+
+function turn(player, opponent) {
+  var question = prompt("opponent, do you have a ______? (type one of the following that you have in your hand: flounder, catfish, sunfish, angelfish, flying_fish, whale, dolphin, goldfish, shark, sailfish)")
+   // if invalid question is a property
+    if ( opponent[question] != 0) {
+      console.log("It's a match!");
+      opponent[question] -= 1;
+      player[question] += 1;
+      checkMatch(player);
+    } else {
+      console.log("Go fish!");
+      goFish(deck, player);
+      checkMatch(player);
+    }
+  };
+};
+
+function goFish(deck, player) {
+  var card = deck.splice(0,1)[0]
+  player[card] += 1;
+}
+
+function gameOver() {
+
+}
