@@ -110,12 +110,12 @@ silverware_drawer.dump
 
 =begin
 What concepts did you review in this challenge?
--
+- how to set a parameter that can default to a value if no argument is passed
 
 What is still confusing to you about Ruby?
--
+- passing variables vs. strings as arguments took some extra thinking here
 
 What are you going to study to get more prepared for Phase 1?
--
+- read about other built-in methods to be more familiar with possibilities
 
 =end

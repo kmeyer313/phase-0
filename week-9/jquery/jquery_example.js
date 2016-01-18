@@ -70,11 +70,11 @@ $('img').click(function(e){
 
 });
 
-
-
 })  // end of the document.ready function: do not remove or write DOM manipulation below this.
 
 // Reflection
-// What is jQuery?
-// What does jQuery do for you?
-// What did you learn about the DOM while working on this challenge?
+// What is jQuery? - It is a JavaScript file that you include in your web pages that lets you find elements using CSS-style selectors and then do something with the elements using jQuery methods.
+
+// What does jQuery do for you? - It allows you to do JavaScript tasks quickly and consistently across all major browsers and without any fallback code.
+
+// What did you learn about the DOM while working on this challenge? - How to select and modify HTML elements with jQuery. It was cool to learn about different event handlers which really brought more life to the page!
